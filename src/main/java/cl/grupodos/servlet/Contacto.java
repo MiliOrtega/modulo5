@@ -40,9 +40,8 @@ public class Contacto extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-		String nombre = request.getParameter("nombres"); 
-		String apellido = request.getParameter("apellidos");
-		String email = request.getParameter("email");
+		String nombre = request.getParameter("nombres"); 		
+		String email = request.getParameter("mail");
 		
 		PrintWriter salida;
 		response.setContentType("text/html");
@@ -50,7 +49,7 @@ public class Contacto extends HttpServlet {
 		
 		salida.println("<html><body>");
 		salida.println("<h1> Contacto </h1>");
-		salida.println("<p> Sr/a: "+nombre+ " " +apellido+ " "  +"</p>");
+		salida.println("<p> Sr/a: "+nombre+ " " + " "  +"</p>");
 		salida.println("<p> Correo electronico: "+ email +"</p>");
 		salida.println("<spam>"+ "Gracias por comunicarte con nosotros, a la brevedad nos comunicaremos contigo" +"</spam>");
 		salida.println("</body><html>");

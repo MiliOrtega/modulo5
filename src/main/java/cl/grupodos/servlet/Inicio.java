@@ -39,9 +39,15 @@ public class Inicio extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		
+		String Cliente = request.getParameter("Cliente");
+		String Administrativo = request.getParameter("Administrativo");
+		String Profesional = request.getParameter("Profesional");		
+			
+		
 		
 		pw.println("<html><body>");
-		pw.println("<h1> Inicio </h1>");			
+		pw.println("<h1> Inicio </h1>");	
+		pw.println("<p> Bienvenido" + Cliente + Administrativo + Profesional + "</p>");
 		pw.println("</body><html>");
 		
 		pw.close();
